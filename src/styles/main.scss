@@ -1,0 +1,8 @@
+@import './base/reset.scss';
+@import './base/vars.scss';
+@import './base/mixins.scss';
+@import './base/global.scss';
+
+// components
+@import './pages/login.scss';
+@import './pages/errorPage.scss';

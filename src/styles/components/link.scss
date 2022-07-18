@@ -1,0 +1,18 @@
+.link {
+  font-size: 12px;
+  color: $accent-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-accent-color;
+  }
+
+  &:focus {
+    text-decoration: underline;
+    // color: $focus-accent-color;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

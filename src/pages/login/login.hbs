@@ -1,7 +1,24 @@
-{{title}}
-
-<div>
-  {{#each inputs}}
-    <p>{{this}}</p>
-  {{/each}}
+<div class='login'>
+  <form class='login__form login-form'>
+    <h1 class='login-form__title'>{{title}}</h1>
+    <ul class='login-form__inputs'>
+      {{#each inputs}}
+        <li class='login-form__input'>
+          <div class='field'>
+            <label class='field__label'>
+              <input
+                class='field__input'
+                type={{type}}
+                name={{name}}
+                autocomplete={{autocomplete}}
+              />
+              <span class='field__label-text'>{{label}}</span>
+            </label>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+    <button class='login-form__btn btn' type='submit'>{{btnText}}</button>
+    <a class='login-form__link link link--center' href={{linkPath}}>{{linkText}}</a>
+  </form>
 </div>

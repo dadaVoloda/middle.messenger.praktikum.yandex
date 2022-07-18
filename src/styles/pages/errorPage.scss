@@ -1,0 +1,22 @@
+.error-page {
+  @include centered-content;
+}
+
+.error-page__inner {
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+}
+
+.error-page__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.error-page__subtitle {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 1;
+}

@@ -1,0 +1,31 @@
+.login-form {
+  @include card-border;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px 30px 30px;
+}
+
+.login-form__title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.login-form__inputs {
+  flex-grow: 1;
+  margin-bottom: 60px;
+}
+
+.login-form__input {
+  margin-bottom: 24px;
+}
+
+.login-form__btn {
+  margin-bottom: 14px;
+}
+
+.login-form__link {
+}

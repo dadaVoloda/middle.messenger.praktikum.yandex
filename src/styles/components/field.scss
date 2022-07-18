@@ -1,0 +1,32 @@
+.field {
+}
+
+.field__label {
+  position: relative;
+  display: block;
+}
+
+.field__label-text {
+  position: absolute;
+  top: 7;
+  left: 0;
+  color: $secondary-color;
+  transition: $tr-time;
+
+  &.active {
+    top: -11px;
+    font-size: 10px;
+  }
+}
+
+.field__input {
+  width: 100%;
+  padding: 7px 0;
+  border: none;
+  border-bottom: 1px solid $accent-color;
+
+  &:focus ~ .field__label-text {
+    top: -11px;
+    font-size: 10px;
+  }
+}

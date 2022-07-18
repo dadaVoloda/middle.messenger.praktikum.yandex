@@ -1,0 +1,14 @@
+@import '../components/login-form.scss';
+@import '../components/field.scss';
+@import '../components/button.scss';
+@import '../components/link.scss';
+
+.login {
+  @include centered-content;
+}
+
+.login__form {
+  max-width: 340px;
+  min-height: 450px;
+  margin: auto;
+}
