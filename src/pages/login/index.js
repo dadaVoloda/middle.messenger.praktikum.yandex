@@ -1,22 +1,18 @@
 import tpl from './login.hbs';
+import button from '../../components/button';
+import field from '../../components/field';
 
 const data = {
   title: 'Вход',
   inputs: [
     {
-      label: 'Логин',
-      name: 'login',
-      type: 'text',
-      autocomplete: 'true',
+      field: field('text', 'login', 'true', 'Логин')
     },
     {
-      label: 'Пароль',
-      name: 'password',
-      type: 'password',
-      autocomplete: 'false',
-    },
+      field: field('password', 'password', 'false', 'Пароль')
+    }
   ],
-  btnText: 'Авторизоваться',
+  button: button('login-form__btn', 'submit', 'Авторизоваться'),
   linkText: 'Нет аккаунта?',
   linkPath: '/signup',
 };

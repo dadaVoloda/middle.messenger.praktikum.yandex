@@ -4,21 +4,11 @@
     <ul class='login-form__inputs'>
       {{#each inputs}}
         <li class='login-form__input'>
-          <div class='field'>
-            <label class='field__label'>
-              <input
-                class='field__input'
-                type={{type}}
-                name={{name}}
-                autocomplete={{autocomplete}}
-              />
-              <span class='field__label-text'>{{label}}</span>
-            </label>
-          </div>
+          {{{field}}}
         </li>
       {{/each}}
     </ul>
-    <button class='login-form__btn btn' type='submit'>{{btnText}}</button>
+    {{{button}}}
     <a class='login-form__link link link--center' href={{linkPath}}>{{linkText}}</a>
   </form>
 </div>

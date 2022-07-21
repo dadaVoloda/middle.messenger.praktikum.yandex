@@ -1,52 +1,33 @@
 import tpl from './signup.hbs';
+import button from '../../components/button';
+import field from '../../components/field';
 
 const data = {
   title: 'Регистрация',
   inputs: [
     {
-      label: 'Почта',
-      name: 'email',
-      type: 'email',
-      autocomplete: 'true',
+      field: field('email', 'email', 'true', 'Почта')
     },
     {
-      label: 'Логин',
-      name: 'login',
-      type: 'text',
-      autocomplete: 'true',
+      field: field('text', 'login', 'true', 'Логин')
     },
     {
-      label: 'Имя',
-      name: 'first_name',
-      type: 'text',
-      autocomplete: 'true',
+      field: field('text', 'first_name', 'true', 'Имя')
     },
     {
-      label: 'Фамилия',
-      name: 'second_name',
-      type: 'text',
-      autocomplete: 'true',
+      field: field('text', 'second_name', 'true', 'Фамилия')
     },
     {
-      label: 'Телефон',
-      name: 'phone',
-      type: 'tel',
-      autocomplete: 'true',
+      field: field('tel', 'phone', 'true', 'Телефон')
     },
     {
-      label: 'Пароль',
-      name: 'password',
-      type: 'password',
-      autocomplete: 'false',
+      field: field('password', 'password', 'false', 'Пароль')
     },
     {
-      label: 'Пароль (ещё раз)',
-      name: 'password',
-      type: 'password',
-      autocomplete: 'false',
-    },
+      field: field('password', 'password', 'false', 'Пароль (ещё раз)')
+    }
   ],
-  btnText: 'Зарегистрироваться',
+  button: button('login-form__btn', 'submit', 'Зарегистрироваться'),
   linkText: 'Войти',
   linkPath: '/',
 };

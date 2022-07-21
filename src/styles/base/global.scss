@@ -7,6 +7,25 @@ body {
   background-color: $bg-color;
 }
 
+.link {
+  font-size: 13px;
+  line-height: 1;
+  color: $accent-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-accent-color;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
 // .container {
 //   max-width: 1220px;
 //   margin: 0 auto;
