@@ -1,6 +1,7 @@
 import tpl from './login.hbs';
 import button from '../../components/button';
 import field from '../../components/field';
+import toggleActive from '../../utils/toggleActiveInputText';
 
 const data = {
   title: 'Вход',
@@ -19,18 +20,9 @@ const data = {
 
 document.addEventListener('DOMContentLoaded', () => {
   const inputs = document.querySelectorAll('.field__input');
-  const toggleActive = (e) => {
-    const { target } = e;
-    const wrapper = target.closest('.field');
-    const label = wrapper.querySelector('.field__label-text');
-    if (target.value) {
-      label.classList.add('active');
-    } else {
-      label.classList.remove('active');
-    }
-  };
+  
   [...inputs].forEach((inp) => {
-    inp.addEventListener('input', toggleActive);
+    inp.addEventListener('input', (e) => toggleActive(e, '.field', '.field__label-text'));
   });
 });
 

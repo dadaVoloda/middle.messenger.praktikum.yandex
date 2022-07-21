@@ -1,0 +1,155 @@
+@import '../components/search.scss';
+
+.chat-page {
+  display: flex;
+}
+
+.chat-list {
+  flex: 0 1 25%;
+  min-width: 300px;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: $secondary-bg-color;
+  border-right: 1px solid $gray;
+}
+
+.chat-list__top {
+  padding-bottom: 14px;
+  border-bottom: 1px solid $gray;
+}
+
+.chat-list__top-link {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  text-align: end;
+  padding: 10px 12px 10px 0;
+  color: $secondary-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-secondary-color;
+
+    &::after {
+      border: 1px solid $hover-secondary-color;
+      border-width: 1px 1px 0 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $secondary-color;
+    border-width: 1px 1px 0 0;
+    transform: translateY(-50%) rotate(45deg);
+    transition: $tr-time;
+  }
+}
+
+.chat-list__list {}
+
+.chat-list__item {
+  margin: 0 -10px;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  padding: 12px 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: $tr-time;
+  
+  &:hover {
+    background-color: $light-accent-color;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    background-color: $gray;
+  }
+}
+
+.user__avatar {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $gray;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.user__text {
+  flex-grow: 1;
+  margin-right: 15px;
+  color: $secondary-color;
+}
+
+.user__name {
+  font-weight: 600;
+  color: $font-color;
+}
+
+.user__message {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.user__message-info {
+  min-width: 30px;
+}
+
+.user__message-time {
+  margin-bottom: 14px;
+  text-align: end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $secondary-color;
+}
+
+.user__message-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 50%;
+  background-color: $accent-color;
+  color: $btn-color;
+}
+
+.user__message-author {
+  color: $font-color;
+  font-weight: 500;
+}
+
+.chat-feed {
+  flex: 0 1 75%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}

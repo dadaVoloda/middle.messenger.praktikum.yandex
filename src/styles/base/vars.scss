@@ -4,16 +4,17 @@ $slow: 0.5s;
 
 // colors
 $bg-color: #ffffff;
-$secondary-bg-color: #f9f9f9;
+$secondary-bg-color: #fafafa;
 $font-color: #1e1e1e;
 $secondary-color: #999999;
+$hover-secondary-color: darken($secondary-color, 7%);
 $accent-color: #3369f3;
 $hover-accent-color: lighten($accent-color, 6%);
 $focus-accent-color: lighten($accent-color, 10%);
-$light-accent-color: lighten($accent-color, 30%);
+$light-accent-color: lighten($accent-color, 39%);
 $error-color: #ff2f2f;
 $btn-color: #ffffff;
-$gray: #efefef;
+$gray: #ededed;
 
 // width
 $xl: 1199.9px;
