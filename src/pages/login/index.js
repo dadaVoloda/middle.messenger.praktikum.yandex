@@ -1,21 +1,26 @@
 import tpl from './login.hbs';
+import loginForm from '../../components/login-form';
 import button from '../../components/button';
 import field from '../../components/field';
 import toggleActive from '../../utils/toggleActiveInputText';
 
 const data = {
-  title: 'Вход',
-  inputs: [
+  loginForm: loginForm(
+    'Вход',
+    [
+      {
+        field: field('text', 'login', 'true', 'Логин')
+      },
+      {
+        field: field('password', 'password', 'false', 'Пароль')
+      }
+    ],
+    button('login-form__btn', 'submit', 'Авторизоваться'),
     {
-      field: field('text', 'login', 'true', 'Логин')
-    },
-    {
-      field: field('password', 'password', 'false', 'Пароль')
+      path: '/signup',
+      text: 'Нет аккаунта?'
     }
-  ],
-  button: button('login-form__btn', 'submit', 'Авторизоваться'),
-  linkText: 'Нет аккаунта?',
-  linkPath: '/signup',
+  )
 };
 
 document.addEventListener('DOMContentLoaded', () => {

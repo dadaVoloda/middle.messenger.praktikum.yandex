@@ -1,0 +1,12 @@
+<form class='login-form'>
+  <h1 class='login-form__title'>{{title}}</h1>
+  <ul class='login-form__inputs'>
+    {{#each inputs}}
+      <li class='login-form__input'>
+        {{{field}}}
+      </li>
+    {{/each}}
+  </ul>
+  {{{button}}}
+  <a class='login-form__link link link--center' href={{link.path}}>{{link.text}}</a>
+</form>

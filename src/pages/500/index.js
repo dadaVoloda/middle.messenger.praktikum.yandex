@@ -1,8 +1,8 @@
-import tpl from './500.hbs';
-import error from '../../components/error';
+import tpl from './500.hbs'
+import error from '../../components/error'
 
 const data = {
-  error: error('500', 'Мы уже фиксим', {path: '/', text: 'Назад к чатам'})
-};
+  error: error('500', 'Мы уже фиксим', { path: '/chat', text: 'Назад к чатам' }),
+}
 
-export default tpl(data);
+export default tpl(data)

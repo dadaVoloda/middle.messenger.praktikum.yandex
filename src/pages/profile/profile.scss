@@ -1,0 +1,137 @@
+@import '../../assets/styles/base/vars.scss';
+
+.profile-wrapper {
+  @include flex-center;
+  position: relative;
+  min-height: 100vh;
+  padding: 32px 80px;
+
+  @include max($sm) {
+    padding: 24px 16px;
+  }
+}
+
+.profile-back {
+  @include flex-center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 64px;
+  height: 100%;
+  background-color: $secondary-bg-color;
+  border-right: 1px solid $gray;
+
+  @include max($sm) {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.profile {
+  max-width: 510px;
+  width: 100%;
+}
+
+.profile__top {
+  text-align: center;
+}
+
+.profile__img-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+
+    .profile__img-text {
+      opacity: 1;
+    }
+  }
+}
+
+.profile__img {
+  object-fit: cover;
+}
+
+.profile__img-text {
+  @include flex-center;
+  padding: 16px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 1.1;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: $tr-time;
+  opacity: 0;
+}
+
+.profile__display-name {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.profile-form {
+  padding: 60px 0;
+}
+
+.profile-form__label {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.profile-form__label-title {
+  flex: 0 1 45%;
+}
+
+.profile-form__input {
+  flex: 0 1 45%;
+  text-align: right;
+  color: $secondary-color;
+  border: none;
+}
+
+.profile__btns {
+}
+
+.profile__btn-wrap {
+  margin-bottom: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid $gray;
+}
+
+.profile__btn {
+  color: $accent-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-accent-color;
+  }
+  &:focus {
+    color: $focus-accent-color;
+  }
+}
+
+.profile__exit {
+  color: $error-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-error-color;
+  }
+}

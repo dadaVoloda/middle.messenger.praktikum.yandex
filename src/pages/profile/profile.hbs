@@ -1,0 +1,39 @@
+<div class='profile-wrapper'>
+  <div class='profile-back'>
+    <a class='arrow-btn' href='/chat'></a>
+  </div>
+  <div class='profile'>
+    <div class='profile__top'>
+      <div class='profile__img-wrap'>
+        <img class='profile__img' src='{{avatar}}' alt='Аватар' />
+        <p class='profile__img-text'>Поменять аватар</p>
+      </div>
+      <div class='profile__display-name'>Иван</div>
+    </div>
+    <form class='profile-form'>
+      {{#each fields}}
+        <label class='profile-form__label'>
+          <span class='profile-form__label-title'>{{label}}</span>
+          <input
+            class='profile-form__input'
+            type='{{type}}'
+            name='{{name}}'
+            value='{{value}}'
+            disabled
+          />
+        </label>
+      {{/each}}
+    </form>
+
+    <ul class='profile__btns'>
+      <li class='profile__btn-wrap'>
+        <button class='profile__btn' type='button'>Изменить данные</button>
+      </li>
+      <li class='profile__btn-wrap'>
+        <button class='profile__btn' type='button'>Изменить пароль</button>
+      </li>
+    </ul>
+    <a class='profile__exit' href='/login'>Выйти</a>
+
+  </div>
+</div>

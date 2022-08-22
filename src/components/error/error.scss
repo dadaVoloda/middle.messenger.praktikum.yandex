@@ -1,10 +1,13 @@
+@import '../../assets/styles/base/vars.scss';
+
 .error-page {
-  @include centered-content;
+  @include flex-center;
+  min-height: 100vh;
+  padding: 20px 15px;
 }
 
 .error-content {
   max-width: 320px;
-  margin: auto;
   text-align: center;
 }
 
