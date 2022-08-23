@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "rm -rf ./dist/ & parcel static/index.html",
     "build": "rm -rf ./dist/ & parcel build static/index.html --no-cache",
-    "start": "node ./server.js"
+    "start": "rm -rf ./dist/ & parcel build static/index.html --no-cache & node ./server.js"
   },
   "author": "",
   "license": "ISC",
