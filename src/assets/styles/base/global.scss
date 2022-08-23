@@ -1,0 +1,45 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $font-color;
+  background-color: $bg-color;
+}
+
+.link {
+  font-size: 13px;
+  line-height: 1;
+  color: $accent-color;
+  transition: $tr-time;
+
+  &:hover {
+    color: $hover-accent-color;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: $accent-color;
+  background-image: url('../img/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: $tr-time;
+
+  &:hover {
+    background-color: $hover-accent-color;
+  }
+  &:focus {
+    background-color: $focus-accent-color;
+  }
+}

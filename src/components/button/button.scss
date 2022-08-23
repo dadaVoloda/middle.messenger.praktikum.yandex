@@ -1,0 +1,18 @@
+@import '../../assets/styles/base/vars.scss';
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  color: $btn-color;
+  background-color: $accent-color;
+  border-radius: 8px;
+  transition: $tr-time;
+
+  &:hover {
+    background-color: $hover-accent-color;
+  }
+
+  &:focus {
+    background-color: $focus-accent-color;
+  }
+}

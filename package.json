@@ -1,0 +1,23 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "browserlist": "> 1%, last 2 version",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
+    "parcel-transformer-hbs": "^1.0.4"
+  },
+  "scripts": {
+    "dev": "rm -rf ./dist/ & parcel static/index.html",
+    "build": "rm -rf ./dist/ & parcel build static/index.html --no-cache",
+    "start": "rm -rf ./dist/ & parcel build static/index.html --no-cache & node ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-history-api-fallback": "^2.2.1",
+    "handlebars": "^4.7.7"
+  }
+}

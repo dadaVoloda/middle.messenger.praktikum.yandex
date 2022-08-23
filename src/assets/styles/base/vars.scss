@@ -1,0 +1,43 @@
+// transition
+$tr-time: 0.25s;
+$slow: 0.5s;
+
+// colors
+$bg-color: #ffffff;
+$secondary-bg-color: #fafafa;
+$font-color: #1e1e1e;
+$secondary-color: #999999;
+$hover-secondary-color: darken($secondary-color, 8%);
+$accent-color: #3369f3;
+$hover-accent-color: lighten($accent-color, 6%);
+$focus-accent-color: lighten($accent-color, 10%);
+$light-accent-color: lighten($accent-color, 39%);
+$error-color: #ff2f2f;
+$hover-error-color: lighten($error-color, 8%);
+$btn-color: #ffffff;
+$gray: #ededed;
+
+// width
+$xl: 1199.9px;
+$lg: 991.9px;
+$md: 767.9px;
+$sm: 575.9px;
+
+// mixins
+@mixin max($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin card-border {
+  background-color: $bg-color;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

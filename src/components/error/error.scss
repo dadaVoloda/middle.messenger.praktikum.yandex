@@ -1,0 +1,25 @@
+@import '../../assets/styles/base/vars.scss';
+
+.error-page {
+  @include flex-center;
+  min-height: 100vh;
+  padding: 20px 15px;
+}
+
+.error-content {
+  max-width: 320px;
+  text-align: center;
+}
+
+.error-content__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.error-content__subtitle {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 1;
+}
